@@ -15,7 +15,7 @@ run the docker image
 ```
 docker run -p 3000:3000 go-dock
 ```
-Check on `http://localhost:3000` to see if the app is running
+check on `http://localhost:3000` to see if the app is running
 
 stop the docker container
 ```
