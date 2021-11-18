@@ -19,5 +19,5 @@ check on `http://localhost:3000` to see if the app is running
 
 stop the docker container
 ```
-docker stop boilerplate
+docker stop go-dock
 ```
