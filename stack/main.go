@@ -3,23 +3,32 @@ package main
 import "fmt"
 
 func main() {
-	//init an array
-	var stack []int
+	//init a stack
+	var s stack
 
 	//push some values
-	stack = append(stack, 1)
-	stack = append(stack, 2)
-	stack = append(stack, 3)
+	s = s.push(5)
+	s = s.push(2)
+	s = s.push(1)
 
-	printStack(stack)
+	s.print()
 }
 
-func printStack(stack []int) {
-	for len(stack) > 0 {
-		n := len(stack) - 1
-		fmt.Println(stack[n])
+type stack []int
 
+func (s stack) print() {
+	for len(s) > 0 {
+		//print
+		fmt.Println(s[len(s)-1])
 		//pop
-		stack = stack[:n]
+		s = s.pop()
 	}
+}
+
+func (s stack) pop() stack {
+	return s[:len(s)-1]
+}
+
+func (s stack) push(i int) stack {
+	return append(s, i)
 }
